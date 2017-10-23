@@ -1,0 +1,127 @@
+body {
+  background-color: #fff;
+  line-height: 1.5;
+  font-family: monospace; }
+
+#logo {
+  width: 135px;
+  height: auto; }
+
+/****************************************************
+               MEDIA QUERY FOR NAV & NAV BUTTON
+****************************************************/
+@media screen and (min-width: 569px) {
+  #slideBtn {
+    display: none; } }
+#slideNav {
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffe600;
+  transform: translate3d(-100vw, 0, 0);
+  transition: transform .3s ease-in-out;
+  overflow: hidden; }
+  #slideNav h2 a {
+    color: #333;
+    text-decoration: none; }
+    #slideNav h2 a:hover {
+      text-decoration: underline; }
+
+#slideNav.show {
+  transform: translate3d(0vw, 0, 0); }
+
+/***********************************************
+                     HEADER
+***********************************************/
+.flex-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgreen; }
+  .flex-nav #logo {
+    margin: 0; }
+  .flex-nav .flex-menu {
+    display: none;
+    width: 80%;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0; }
+    .flex-nav .flex-menu li a {
+      display: block;
+      padding: 1em;
+      color: #333;
+      transition: .2s ease-in-out; }
+      .flex-nav .flex-menu li a:hover {
+        background: rgba(255, 255, 255, 0.3);
+        text-decoration: none; }
+
+@media screen and (min-width: 569px) {
+  .flex-nav {
+    flex-direction: column; }
+    .flex-nav #logo {
+      margin: 10px; }
+    .flex-nav .flex-menu {
+      display: flex;
+      margin: 10px; } }
+@media screen and (min-width: 880px) {
+  .flex-nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row; }
+    .flex-nav #logo {
+      margin: 10px; }
+    .flex-nav .flex-menu {
+      display: flex;
+      width: 80%;
+      justify-content: space-around; } }
+/***********************************************
+                     Landing and Sites
+***********************************************/
+#landing-sites .title {
+  margin: 30px auto;
+  width: 300px;
+  text-align: center;
+  border: 2px solid black; }
+#landing-sites figure {
+  margin: 20px 0;
+  max-width: 100%;
+  height: auto;
+  position: relative; }
+  #landing-sites figure img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  #landing-sites figure .figure-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.4); }
+    #landing-sites figure .figure-overlay:hover {
+      opacity: 1; }
+  #landing-sites figure .overlay-content {
+    color: #333;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+#landing-sites .container {
+  margin: 50px auto; }
+
+/***********************************************
+                     HEADER
+***********************************************/
+/***********************************************
+                     HEADER
+***********************************************/
+
+/*# sourceMappingURL=main.css.map */
