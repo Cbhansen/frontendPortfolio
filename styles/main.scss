@@ -4,10 +4,15 @@
 }
 
 body {
-   background-color: #fff;
-   line-height: 1.5;
-   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-   font-size: 20px;
+      background: #eee;
+      
+      //background-color: #eee;
+      line-height: 1.5;
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+      font-size: 20px;
+}
+p {
+      padding: 25px;
 }
 
 #logo {
@@ -26,16 +31,17 @@ body {
 }
 
 #slideNav {
-      padding: 50px 0;
+      padding: 100px 0;
       text-align: center;
       z-index: 9999;
       width: 100vw;
       height: 100vh;
+      line-height: 5;
 
       position: fixed;
       top: 0;
       left: 0;
-      background-color: #ffe600;
+      background-color: #FFF;
 
       transform: translate3d(-100vw, 0, 0);
       transition: transform .3s ease-in-out;
@@ -47,7 +53,7 @@ body {
          text-decoration: none;
          text-transform: capitalize;
          &:hover {
-            text-decoration: underline;
+            color: orangered;
          }
       }
 }
@@ -64,7 +70,10 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: lightgreen;
+   background-color: #FFF;
+   #slideBtn {
+         margin-right: 25px;
+   }
    #logo {
       margin: 0;
    }
@@ -77,13 +86,14 @@ body {
       li a {
          display: block;
          padding: 1em;
-         color: #333;
-         transition: .2s ease-in-out;
+         color: #000;
+         transition: .1s ease-in-out;
          text-decoration: none;
          text-transform: capitalize;
          &:hover {
-            background: rgba(255,255,255,.3);
             text-decoration: none;
+            transform: rotateY(30deg);
+            color: orangered;
          }
       }
    }
@@ -141,7 +151,7 @@ body {
       position: relative;
       transition: .1s all;
       &:hover {
-            box-shadow:#222;
+            box-shadow: 0px 3px 10px #000;
       }
       img {
          display: block;
@@ -181,6 +191,11 @@ body {
 }
 
 
+/***********************************************
+                     CONTACT
+***********************************************/
+
+#contact
 
 
 
@@ -189,27 +204,65 @@ body {
 ***********************************************/
 
 footer {
-      background: lightgreen;
+      margin-top: 50px 0;
+      padding-top: 50px;
+      border-top: 2px solid #000;
       width: 100%;
       display: flex;
       #social {
             margin: 25px;
+            font-size: 30px;
             i.fa {
-                  color: #000;
-                  padding: .5em;
+                  color: #333;
+                  padding: 1em;
                   transition: .2s all;
                   &:hover {
                         transform: scale(1.5);
-                        color: #eee;
+                        color: #ccc;
                   }
             }
       }
 }
 
 
+/***********************************************
+                     SKILLS
+***********************************************/
 
+#skills {
+      ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+                  li {
+                        flex: 1;
+                        font-size: 50px;
+                        padding: 10px;
+                  }
+      }
+}
 
 
 /***********************************************
-                     HEADER
+                     BANNER
 ***********************************************/
+
+#banner {
+      min-height: 550px;
+      background: url('https://images.unsplash.com/photo-1495511167051-13bb07bde85b?auto=format&fit=crop&w=1650&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+      background-position: center;
+      background-size: cover;
+      background-repeat: none;
+      position: relative;
+            .banner-title {
+                  position: absolute;
+                  color: #eee;
+                  text-shadow: 0px 0px 2px #333;
+                  font-size: 25px;
+                  line-height: 300px;
+                  top: 50px;
+            }
+}

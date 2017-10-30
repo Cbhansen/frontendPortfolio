@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 body {
-  background-color: #fff;
+  background: #eee;
   line-height: 1.5;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 20px; }
+
+p {
+  padding: 25px; }
 
 #logo {
   width: 135px;
@@ -16,15 +19,16 @@ body {
   #slideBtn {
     display: none; } }
 #slideNav {
-  padding: 50px 0;
+  padding: 100px 0;
   text-align: center;
   z-index: 9999;
   width: 100vw;
   height: 100vh;
+  line-height: 5;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #ffe600;
+  background-color: #FFF;
   transform: translate3d(-100vw, 0, 0);
   transition: transform .3s ease-in-out;
   overflow: hidden; }
@@ -33,7 +37,7 @@ body {
     text-decoration: none;
     text-transform: capitalize; }
     #slideNav h2 a:hover {
-      text-decoration: underline; }
+      color: orangered; }
 
 #slideNav.show {
   transform: translate3d(0vw, 0, 0); }
@@ -45,7 +49,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightgreen; }
+  background-color: #FFF; }
+  .flex-nav #slideBtn {
+    margin-right: 25px; }
   .flex-nav #logo {
     margin: 0; }
   .flex-nav .flex-menu {
@@ -57,13 +63,14 @@ body {
     .flex-nav .flex-menu li a {
       display: block;
       padding: 1em;
-      color: #333;
-      transition: .2s ease-in-out;
+      color: #000;
+      transition: .1s ease-in-out;
       text-decoration: none;
       text-transform: capitalize; }
       .flex-nav .flex-menu li a:hover {
-        background: rgba(255, 255, 255, 0.3);
-        text-decoration: none; }
+        text-decoration: none;
+        transform: rotateY(30deg);
+        color: orangered; }
 
 @media screen and (min-width: 569px) {
   .flex-nav {
@@ -99,7 +106,7 @@ body {
   position: relative;
   transition: .1s all; }
   #landing-sites figure:hover {
-    box-shadow: #222; }
+    box-shadow: 0px 3px 10px #000; }
   #landing-sites figure img {
     display: block;
     width: 100%;
@@ -130,24 +137,60 @@ body {
   margin: 50px auto; }
 
 /***********************************************
-                     FOOTER
+                     CONTACT
 ***********************************************/
+#contact
 footer {
-  background: lightgreen;
+  margin-top: 50px 0;
+  padding-top: 50px;
+  border-top: 2px solid #000;
   width: 100%;
   display: flex; }
+  #contact
   footer #social {
-    margin: 25px; }
+    margin: 25px;
+    font-size: 30px; }
+    #contact
     footer #social i.fa {
-      color: #000;
-      padding: .5em;
+      color: #333;
+      padding: 1em;
       transition: .2s all; }
+      #contact
       footer #social i.fa:hover {
         transform: scale(1.5);
-        color: #eee; }
+        color: #ccc; }
 
 /***********************************************
-                     HEADER
+                     SKILLS
 ***********************************************/
+#skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  #skills ul li {
+    flex: 1;
+    font-size: 50px;
+    padding: 10px; }
+
+/***********************************************
+                     BANNER
+***********************************************/
+#banner {
+  min-height: 550px;
+  background: url("https://images.unsplash.com/photo-1495511167051-13bb07bde85b?auto=format&fit=crop&w=1650&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  position: relative; }
+  #banner .banner-title {
+    position: absolute;
+    color: #eee;
+    text-shadow: 0px 0px 2px #333;
+    font-size: 25px;
+    line-height: 300px;
+    top: 50px; }
 
 /*# sourceMappingURL=main.css.map */
