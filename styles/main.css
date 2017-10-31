@@ -207,6 +207,7 @@ p {
   background-position: center;
   background-size: cover;
   background-repeat: none;
+  background-attachment: fixed;
   position: relative; }
   #banner .banner-title {
     position: absolute;
