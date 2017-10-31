@@ -2,7 +2,9 @@
 * {
    //
 }
-
+.container {
+      width: 100%;
+}
 body {
       background: #eee;
       
@@ -10,6 +12,9 @@ body {
       line-height: 1.5;
       font-family: 'Roboto', Arial, Helvetica, sans-serif;
       font-size: 20px;
+}
+.line-through {
+      text-decoration: line-through;
 }
 p {
       padding: 25px;
@@ -195,30 +200,44 @@ p {
                      CONTACT
 ***********************************************/
 
-#contact
-
-
-
-/***********************************************
-                     FOOTER
-***********************************************/
-
-footer {
-      margin-top: 50px 0;
-      padding-top: 50px;
-      border-top: 2px solid #000;
-      width: 100%;
-      display: flex;
-      #social {
-            margin: 25px;
-            font-size: 30px;
-            i.fa {
-                  color: #333;
-                  padding: 1em;
-                  transition: .2s all;
+#contact {
+      .top {
+            position: relative;
+            width: 100%;
+            padding: 25px 0;
+            min-height: 300px;
+            height: 100%;
+            background: #42a5de;
+            text-align: center;
+            color: #fff;
+                  .contactBtn {
+                        border: 2px solid #fff;
+                        padding: .5em;
+                        color: #fff;
+                        transition: .2s all;
+                        &:hover {
+                              text-decoration: none;
+                              background: #fff;
+                              color: #000;
+                        }
+                  }
+      }
+      .bottom {
+            position: relative;
+            width: 100%;
+            padding: 25px 0;
+            min-height: 250px;
+            height: 100%;
+            background: #252525;
+            text-align: center;
+            color: orangered;
+            .fa {
+                  transition: .5s all;
+                  color: dodgerblue;
+                  font-size: 25px;
+                  padding: .5em;
                   &:hover {
-                        transform: scale(1.5);
-                        color: #ccc;
+                        color: orangered;
                   }
             }
       }
@@ -241,6 +260,10 @@ footer {
                         flex: 1;
                         font-size: 50px;
                         padding: 10px;
+                        color: #333;
+                              &:hover {
+                                    color: orangered;
+                              }
                   }
       }
 }
@@ -261,7 +284,6 @@ footer {
                   position: absolute;
                   color: #eee;
                   text-shadow: 0px 0px 2px #333;
-                  font-size: 25px;
                   line-height: 300px;
                   top: 50px;
             }
